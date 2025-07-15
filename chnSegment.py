@@ -3,7 +3,7 @@
 from collections import Counter
 from os import path
 import jieba
-jieba.load_userdict(path.join(path.dirname(__file__),'userdict//userdict.txt')) # 导入用户自定义词典
+jieba.load_userdict(path.join(path.dirname(__file__),'doc//userdict.txt')) # 导入用户自定义词典
 
 def word_segment(text):
     '''

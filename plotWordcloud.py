@@ -18,18 +18,18 @@ def generate_wordcloud(seg_text):
     input_mask = np.array(Image.open(path.join(d, "Images//input_mask.png")))
     font_path=path.join(d,"font//msyh.ttf")
 
-    stopwords = set(STOPWORDS) # 设置默认停用词
-    my_stopwords = set() # 添加自定义停用词
+    stopwords = set(STOPWORDS) # 设置默认屏蔽词（停用词）
+    my_stopwords = set() # 添加自定义屏蔽词
     with open(path.join(d, 'doc//stopwords.txt'), encoding='utf-8') as f:
         for line in f:
             my_stopwords.add(line.strip())
     stopwords.update(my_stopwords)
 
-    words = seg_text.split(' ')
+    words = seg_text.split(' ') # 低频词过滤
     words = [w.strip() for w in words if w.strip() and w not in stopwords]
     counter = Counter(words)
-    min_freq = 2 # 设置词频阈值，低于此频率的词将被过滤
-    filtered_words = {word: freq for word, freq in counter.items() if freq >= min_freq}
+    min_freq = 1 # 设置词频阈值，出现次数小于等于此的词将被过滤，默认为1
+    filtered_words = {word: freq for word, freq in counter.items() if freq > min_freq}
 
     wc = WordCloud(background_color="white",# 设置背景颜色
            max_words=2000, # 词云显示的最大词数  

@@ -1,7 +1,11 @@
 所有文字都会被jieba切分为词
 这包括正常文字
 abcdefghijklmnopqrstuvwxyz
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+字母字母字母
+数字数字数字
 0123456789
+0 1 2 3 4 5 6 7 8 9
 也包括无意义的各种语气词或者虚词
 比如
 的的的的的的的的的的的的的的的的的的的的的
