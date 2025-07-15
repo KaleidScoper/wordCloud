@@ -18,8 +18,8 @@
 
 ## 运行结果
 
-双击运行run.bat，会把doc路径下的纯文本“input.txt”生成images下的词云图“output.png”，和doc下的“词频统计.txt”  
-eg:
+双击运行run.bat，会把doc路径下的纯文本“input.txt”生成images下的词云图“output.png”，和doc下的“词频统计.txt” 。
+示例如下：（输入文本为长恨歌）
 ![image](Images/output.png)
 
 
