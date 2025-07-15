@@ -13,10 +13,10 @@ def generate_wordcloud(seg_text):
     如果是中文文本，此处输入的是已经分好词、空格分隔的文本。
     现在做低频词过滤后生成词云
     '''
-    # 设置显示方式
+    # 自定义字体和背景
     d=path.dirname(__file__)
     input_mask = np.array(Image.open(path.join(d, "images//input_mask.png")))
-    font_path=path.join(d,"font//msyh.ttf")
+    font_path=path.join(d,"font//宋徽宗瘦金体.ttf")
 
     stopwords = set(STOPWORDS) # 设置默认屏蔽词（停用词）
     my_stopwords = set() # 添加自定义屏蔽词
