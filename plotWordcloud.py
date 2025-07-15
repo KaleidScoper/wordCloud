@@ -15,7 +15,7 @@ def generate_wordcloud(seg_text):
     '''
     # 设置显示方式
     d=path.dirname(__file__)
-    input_mask = np.array(Image.open(path.join(d, "Images//input_mask.png")))
+    input_mask = np.array(Image.open(path.join(d, "images//input_mask.png")))
     font_path=path.join(d,"font//msyh.ttf")
 
     stopwords = set(STOPWORDS) # 设置默认屏蔽词（停用词）
@@ -43,7 +43,7 @@ def generate_wordcloud(seg_text):
     # wc.generate(text)
 
     # 生成的词云图像保存到本地
-    wc.to_file(path.join(d, "Images//output.png"))
+    wc.to_file(path.join(d, "images//output.png"))
 
     # 显示图像
     plt.imshow(wc, interpolation='bilinear')
