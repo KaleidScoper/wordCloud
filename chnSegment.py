@@ -16,7 +16,7 @@ def word_segment(text):
     for word in jieba_word:
         data.append(word)
     dataDict=Counter(data)
-    with open('doc//词频统计.txt','w') as fw:
+    with open('doc//词频统计.txt','w', encoding='utf-8') as fw:
         for k,v in dataDict.items():
             fw.write("%s,%d\n" % (k,v))
         #  fw.write("%s"%dataDict)
