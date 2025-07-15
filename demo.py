@@ -12,7 +12,7 @@ if __name__=='__main__':
     text = open(path.join(d,'doc//input.txt'), encoding='utf-8').read()
 
     # 若是中文文本，则先进行分词操作
-    text = chnSegment.word_segment(text)
+    seg_text = chnSegment.word_segment(text)
     
     # 生成词云
-    plotWordcloud.generate_wordcloud(text)
+    plotWordcloud.generate_wordcloud(seg_text)
